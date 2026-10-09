@@ -1,0 +1,195 @@
+/* Identidad visual de Veterinaria San Marcos sobre Bootstrap.
+   Los colores provienen de la hoja de estilos de la Evaluación 1. */
+:root {
+  --sm-verde: #1b6a58;
+  --sm-verde-oscuro: #114237;
+  --sm-verde-claro: #e8f1ee;
+  --sm-acento: #e76f51;
+
+  --bs-primary: var(--sm-verde);
+  --bs-primary-rgb: 27, 106, 88;
+  --bs-link-color: var(--sm-verde);
+  --bs-link-color-rgb: 27, 106, 88;
+  --bs-link-hover-color: var(--sm-verde-oscuro);
+  --bs-link-hover-color-rgb: 17, 66, 55;
+  --bs-body-bg: #f4f7fa;
+  --bs-body-color: #183044;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--sm-verde);
+  --bs-btn-border-color: var(--sm-verde);
+  --bs-btn-hover-bg: var(--sm-verde-oscuro);
+  --bs-btn-hover-border-color: var(--sm-verde-oscuro);
+  --bs-btn-active-bg: var(--sm-verde-oscuro);
+  --bs-btn-active-border-color: var(--sm-verde-oscuro);
+  --bs-btn-disabled-bg: var(--sm-verde);
+  --bs-btn-disabled-border-color: var(--sm-verde);
+  --bs-btn-focus-shadow-rgb: 27, 106, 88;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--sm-verde);
+  --bs-btn-border-color: var(--sm-verde);
+  --bs-btn-hover-bg: var(--sm-verde);
+  --bs-btn-hover-border-color: var(--sm-verde);
+  --bs-btn-active-bg: var(--sm-verde);
+  --bs-btn-active-border-color: var(--sm-verde);
+  --bs-btn-focus-shadow-rgb: 27, 106, 88;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--sm-verde);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #6fae9f;
+  box-shadow: 0 0 0 0.25rem rgb(27 106 88 / 25%);
+}
+
+.form-check-input:checked {
+  background-color: var(--sm-verde);
+  border-color: var(--sm-verde);
+}
+
+/* Foco visible para navegación con teclado (heredado de la Evaluación 1). */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--sm-acento);
+  outline-offset: 2px;
+}
+
+.salto-contenido {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 2000;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border-radius: 0.375rem;
+}
+
+.salto-contenido:focus {
+  top: 0.5rem;
+}
+
+/* La página activa del menú no se distingue solo por el color. */
+.navbar .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+.imagen-tarjeta {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: var(--sm-verde-claro);
+}
+
+.imagen-miniatura {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  background-color: var(--sm-verde-claro);
+}
+
+.imagen-carrusel {
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+@media (min-width: 992px) {
+  .imagen-carrusel {
+    height: 380px;
+  }
+}
+
+.precio-anterior {
+  text-decoration: line-through;
+  color: var(--bs-secondary-color);
+}
+
+.tarjeta-enlace {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta-enlace:hover,
+.tarjeta-enlace:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.25rem rgb(20 48 68 / 12%);
+}
+
+/* Panel de administración */
+.barra-admin {
+  background-color: var(--sm-verde-oscuro);
+}
+
+@media (min-width: 992px) {
+  .barra-admin {
+    width: 250px;
+    min-height: 100vh;
+    flex-shrink: 0;
+  }
+}
+
+.barra-admin .nav-link {
+  color: rgb(255 255 255 / 85%);
+  border-radius: 0.375rem;
+}
+
+.barra-admin .nav-link:hover,
+.barra-admin .nav-link:focus-visible {
+  color: #ffffff;
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.barra-admin .nav-link.active {
+  color: var(--sm-verde-oscuro);
+  background-color: #ffffff;
+}
+
+.icono-estadistica {
+  font-size: 2.25rem;
+  opacity: 0.85;
+}
+
+/* Al imprimir la boleta se ocultan menús y botones. */
+@media print {
+  .no-imprimir,
+  header,
+  footer,
+  nav,
+  aside {
+    display: none !important;
+  }
+}
+
+.buscador-tienda {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .buscador-tienda {
+    width: auto;
+    flex: 1 1 auto;
+    max-width: 36rem;
+  }
+}
+
+.d-contents {
+  display: contents;
+}
