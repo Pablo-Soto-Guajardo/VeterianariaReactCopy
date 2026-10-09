@@ -35,6 +35,18 @@ function Checkout({ carrito, sesion, onCompraExitosa }) {
   const total = calcularTotal(items);
   const textoTotal = total === 0 ? "$0" : formatearPrecio(total);
 
+  // Tras un pago aprobado el carrito se vacía antes de cambiar de página:
+  // se muestra la confirmación en curso en vez del mensaje de carrito vacío.
+  if (items.length === 0 && procesando) {
+    return (
+      <Container className="py-5 text-center" role="status">
+        <h1 className="visually-hidden">Checkout</h1>
+        <Spinner aria-hidden="true" />
+        <p className="mt-3">Confirmando tu compra...</p>
+      </Container>
+    );
+  }
+
   if (items.length === 0) {
     return (
       <Container className="py-5">
