@@ -49,7 +49,14 @@ function Inicio({ onAgregar }) {
   return (
     <>
       <h1 className="visually-hidden">Veterinaria San Marcos: tienda online</h1>
-      <Carousel className="bg-dark" interval={6000} aria-label="Novedades de la tienda">
+      <Carousel
+        className="bg-dark"
+        interval={6000}
+        aria-label="Novedades de la tienda"
+        prevLabel="Anterior"
+        nextLabel="Siguiente"
+        indicatorLabels={diapositivas.map((_, indice) => `Diapositiva ${indice + 1}`)}
+      >
         {diapositivas.map((diapositiva) => (
           <Carousel.Item key={diapositiva.titulo}>
             <ImagenConRespaldo src={diapositiva.imagen} alt="" className="d-block w-100 imagen-carrusel" />
