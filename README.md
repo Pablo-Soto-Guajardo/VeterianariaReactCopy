@@ -3,8 +3,8 @@
 Tienda online y panel de administración de la **Veterinaria San Marcos** (Rancagua), desarrollada para la
 asignatura **Desarrollo FullStack II (DSY1104)** de Duoc UC – Evaluación Parcial 2.
 
-La versión de la Evaluación 1 (HTML, CSS y JavaScript) se conserva en la rama
-[`ea1-html`](../../tree/ea1-html).
+La versión de la Evaluación 1 (HTML, CSS y JavaScript) se conserva en el repositorio
+[VeterinariaGrupo5](https://github.com/Pablo-Soto-Guajardo/VeterinariaGrupo5).
 
 ## Integrantes – Grupo 5
 
