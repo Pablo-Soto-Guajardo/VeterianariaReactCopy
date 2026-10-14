@@ -30,6 +30,10 @@ La versión de la Evaluación 1 (HTML, CSS y JavaScript) se conserva en el repos
 
 ## Cómo ejecutar
 
+Requiere **Node.js 18 o superior** (probado en Node 18, 20 y 22). Las versiones de Vite, Vitest y jsdom se
+eligieron para que el proyecto funcione también en los computadores del laboratorio, que no siempre tienen
+la última versión de Node.
+
 ```bash
 npm install
 npm run dev          # servidor de desarrollo (http://localhost:5173)
@@ -142,10 +146,10 @@ Revisión realizada en 375, 768, 1024 y 1440 px sobre las 37 rutas: sin desplaza
 
 | Métrica | Cobertura |
 | --- | --- |
-| Statements | 93,8 % |
-| Branches | 86,1 % |
+| Statements | 93,9 % |
+| Branches | 86,0 % |
 | Functions | 92,6 % |
-| Lines | 94,8 % |
+| Lines | 94,7 % |
 
 Incluyen pruebas de renderizado, renderizado condicional, props, estado, eventos, un **spy** sobre
 `localStorage` (`vi.spyOn`) y un **mock** del servicio de pago (`vi.mock`) para probar compras aprobadas y

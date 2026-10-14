@@ -13,7 +13,8 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "html", "json-summary"],
       include: ["src/**/*.{js,jsx}"],
-      exclude: ["src/main.jsx", "src/test/**", "src/**/*.spec.{js,jsx}"]
+      exclude: ["src/main.jsx", "src/test/**", "src/**/*.spec.{js,jsx}"],
+      experimentalAstAwareRemapping: true
     }
   }
 });
